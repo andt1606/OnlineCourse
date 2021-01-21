@@ -8,7 +8,15 @@
     <jsp:body>
         <div class="card">
             <div class="card-header">
-                <h4>Categories</h4>
+                <h4 class="d-flex justify-content-between">Categories
+
+                    <a class="btn btn-outline-success" href="${pageContext.request.contextPath}/Admin/Category/Add" role="button">
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                        Add Category
+                    </a>
+
+
+                </h4>
             </div>
             <c:choose>
                 <c:when test="${categories.size() == 0}">
@@ -32,7 +40,7 @@
                                     <th scope="row">${c.catID}</th>
                                     <td>${c.catName}</td>
                                     <td class="text-right">
-                                        <a class="btn btn-sm btn-outline-primary" href="#" role="button">
+                                        <a class="btn btn-sm btn-outline-primary" href="${pageContext.request.contextPath}/Admin/Category/Edit?id=${c.catID}" role="button">
                                             <i class="fa fa-pencil" aria-hidden="true"></i>
                                         </a>
                                     </td>
