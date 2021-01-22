@@ -27,7 +27,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dc7028fb-7dfd-4a79-91c9-0384b909dc81" name="Default Changelist" comment="" />
+    <list default="true" id="dc7028fb-7dfd-4a79-91c9-0384b909dc81" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/vwHome/Index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/vwHome/Index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebWjbu-1.0-SNAPSHOT/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebWjbu-1.0-SNAPSHOT/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebWjbu-1.0-SNAPSHOT/views/vwHome/Index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebWjbu-1.0-SNAPSHOT/views/vwHome/Index.jsp" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -92,7 +97,7 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="Tomcat 9.0.40" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.40" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+    <configuration name="Tomcat 9.0.40" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.10" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="OPEN_IN_BROWSER" value="false" />
       <option name="UPDATING_POLICY" value="redeploy-artifacts" />
       <deployment>
@@ -129,6 +134,21 @@
         </SHUTDOWN>
       </ConfigurationWrapper>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Profile">
         <option name="USE_ENV_VARIABLES" value="true" />
         <STARTUP>
           <option name="USE_DEFAULT" value="true" />
@@ -193,75 +213,5 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="251" y="0" key="#Project_Structure" timestamp="1611151050871">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="251" y="0" key="#Project_Structure/0.0.1536.824@0.0.1536.824" timestamp="1611151050871" />
-    <state x="255" y="59" width="1089" height="765" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1611150459656">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="255" y="59" width="1089" height="765" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1611150459656" />
-    <state x="576" y="158" key="#com.intellij.ide.util.MemberChooser" timestamp="1611153483394">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="576" y="158" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1611153483394" />
-    <state x="531" y="184" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1611051839379">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="531" y="184" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1611051839379" />
-    <state width="918" height="144" key="GridCell.Tab.0.bottom" timestamp="1611153348476">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="918" height="144" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1611153348476" />
-    <state width="918" height="144" key="GridCell.Tab.0.center" timestamp="1611153348475">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="918" height="144" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1611153348475" />
-    <state width="918" height="144" key="GridCell.Tab.0.left" timestamp="1611153348475">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="918" height="144" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1611153348475" />
-    <state width="918" height="144" key="GridCell.Tab.0.right" timestamp="1611153348475">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="918" height="144" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1611153348475" />
-    <state width="918" height="144" key="GridCell.Tab.1.bottom" timestamp="1611153344062">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="918" height="144" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1611153344062" />
-    <state width="918" height="144" key="GridCell.Tab.1.center" timestamp="1611153344062">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="918" height="144" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1611153344062" />
-    <state width="918" height="144" key="GridCell.Tab.1.left" timestamp="1611153344062">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="918" height="144" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1611153344062" />
-    <state width="918" height="144" key="GridCell.Tab.1.right" timestamp="1611153344062">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="918" height="144" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1611153344062" />
-    <state width="918" height="144" key="GridCell.Tab.2.bottom" timestamp="1611153344063">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="918" height="144" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1611153344063" />
-    <state width="918" height="144" key="GridCell.Tab.2.center" timestamp="1611153344063">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="918" height="144" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1611153344063" />
-    <state width="918" height="144" key="GridCell.Tab.2.left" timestamp="1611153344063">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="918" height="144" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1611153344063" />
-    <state width="918" height="144" key="GridCell.Tab.2.right" timestamp="1611153344063">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="918" height="144" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1611153344063" />
-    <state x="279" y="87" key="SettingsEditor" timestamp="1611152708418">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="279" y="87" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1611152708418" />
   </component>
 </project>

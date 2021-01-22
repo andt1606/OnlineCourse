@@ -18,6 +18,11 @@
 <%--    <link rel="stylesheet" href="./style.css">--%>
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/views/vwHome/style.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/views/vwHome/slick.css">
+    <style>
+        <%@include file="/views/vwHome/slick.css"%>
+        <%@include file="/views/vwHome/reset.css"%>
+        <%@include file="/views/vwHome/style.css"%>
+    </style>
 
 
 </head>
