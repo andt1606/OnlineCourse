@@ -30,9 +30,7 @@ public class HomeServlet extends HttpServlet {
             case "/Index":
                 ServletUtils.forward("/views/vwHome/Index.jsp", request, response);
                 break;
-            case "/About":
-//                ServletUtils.forward("/views/vwHome/About.jsp", request, response);
-                break;
+            
 
             case "/ByCat":
                 int catID = Integer.parseInt(request.getParameter("id"));

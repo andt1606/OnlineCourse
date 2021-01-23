@@ -31,14 +31,15 @@
                                             </h5>
                                             <p class="card-text">${c.tinyDes}</p>
                                         </div>
-                                        <div class="card-footer">
+                                        <div class="card-footer p-4">
                                             <a class="btn btn-sm btn-outline-primary" href="${pageContext.request.contextPath}/Course/Detail?id=${c.courseID}" role="button">
-                                                <i class="fa fa-eye" aria-hidden="true"></i>
-                                                Details
+                                                <i style="font-size: 19px" class="fa fa-eye" aria-hidden="true"></i>
+                                                <span style="font-size: 17px">Details</span>
                                             </a>
                                             <a class="btn btn-sm btn-outline-success" href="#" role="button">
-                                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                                                Add to cart
+                                                <i style="font-size: 19px" class="fa fa-shopping-cart" aria-hidden="true"></i>
+
+                                                <span style="font-size: 17px">Add to cart</span>
                                             </a>
                                         </div>
                                     </div>

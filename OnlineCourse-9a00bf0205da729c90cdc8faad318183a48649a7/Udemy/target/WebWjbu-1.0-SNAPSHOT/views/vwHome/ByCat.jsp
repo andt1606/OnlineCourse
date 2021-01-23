@@ -1,4 +1,4 @@
-<<<<<<< HEAD:OnlineCourse-9a00bf0205da729c90cdc8faad318183a48649a7/Udemy/target/WebWjbu-1.0-SNAPSHOT/views/vwHome/ByCat.jsp
+<<<<<<< HEAD:OnlineCourse-9a00bf0205da729c90cdc8faad318183a48649a7/Udemy/src/main/webapp/views/vwHome/ByCat.jsp
 <%@ page contentType="text/html; charset=utf-8" %>
 <%@ taglib prefix="t" tagdir="/WEB-INF/tags" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
@@ -34,7 +34,7 @@
 </head>
 <body>
 
->>>>>>> f17aae4ab79baeb37e63b60296fabfbf82536957:Udemy/src/main/webapp/views/vwHome/Index.jsp
+>>>>>>> f17aae4ab79baeb37e63b60296fabfbf82536957:Udemy/target/WebWjbu-1.0-SNAPSHOT/views/vwHome/Index.jsp
 
 <jsp:useBean id="courses" scope="request" type="java.util.List<beans.Course>"/>
 

@@ -1,5 +1,5 @@
 html {
-    font-size: 62.5%;
+    font-size: 62.5% !important;
 }
 
 * {
@@ -8,7 +8,7 @@ html {
 
 body {
     font-family: "Poppins", sans-serif;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     font-weight: normal;
 }
 
@@ -137,6 +137,7 @@ img {
 .nav__login:hover {
     color: #094C59;
     border: 1px solid #094C59;
+    text-decoration: none;
 }
 .nav__signup {
     margin-left: 5px;
@@ -145,9 +146,11 @@ img {
     border-radius: 3px;
     color: white;
     cursor: pointer;
+    text-decoration: none;
 }
 .nav__signup:hover {
     background-color: #094C59;
+    text-decoration: none;
 }
 .nav-business {
     cursor: pointer;
