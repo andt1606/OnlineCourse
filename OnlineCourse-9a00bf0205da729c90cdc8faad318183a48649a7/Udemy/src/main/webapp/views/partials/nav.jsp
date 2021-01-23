@@ -1,7 +1,7 @@
 <%@ page contentType="text/html; charset=utf-8" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
-
+<jsp:useBean id="authUser" scope="session" type="beans.User"/>
 
 <section class="nav">
     <!-- <div class="nav__logo"> -->
@@ -88,8 +88,40 @@
 
     <i style="font-size: 20px" class="fa fa-shopping-cart nav__cart" aria-hidden="true"></i>
 
-<%--    <div class="nav__login" style="font-size: 14px">Login</div>--%>
-    <a href="${pageContext.request.contextPath}/Account/Login" class="nav__login" style="font-size: 14px">Login </a>
-<%--    <div class="nav__signup" style="font-size: 14px">Sign up</div>--%>
-    <a  href="${pageContext.request.contextPath}/Account/Register" class="nav__signup" style="font-size: 14px ">Sign up </a>
+<%--    <a href="${pageContext.request.contextPath}/Account/Login" class="nav__login" style="font-size: 14px">Login </a>--%>
+<%--    <a  href="${pageContext.request.contextPath}/Account/Register" class="nav__signup" style="font-size: 14px ">Sign up </a>--%>
+    <ul class="d-flex ">
+        <c:choose>
+            <c:when test="${auth}">
+                <form id="frmLogout" method="post" action="${pageContext.request.contextPath}/Account/Logout"></form>
+                <li class="nav-item dropdown ml-6">
+                    <a style="font-size: 14px" class="nav-link dropdown-toggle ml-5" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false">
+                        Hi, <b>${authUser.name}</b>!
+                    </a>
+
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a style="font-size: 15px" class="dropdown-item p-2" href="${pageContext.request.contextPath}/Account/Profile">
+                            <i class="fa fa-user" aria-hidden="true"></i>
+                            Profile
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a style="font-size: 15px" class="dropdown-item p-2 " href="javascript: $('#frmLogout').submit();">
+                            <i class="fa fa-sign-out" aria-hidden="true"></i>
+                            Logout
+                        </a>
+                    </div>
+                </li>
+            </c:when>
+            <c:otherwise>
+                <li class="nav-item">
+                    <a href="${pageContext.request.contextPath}/Account/Login" class="nav__login" style="font-size: 14px">Login </a>
+                </li>
+                <li class="nav-item">
+                    <a  href="${pageContext.request.contextPath}/Account/Register" class="nav__signup" style="font-size: 14px ">Sign up </a>
+                </li>
+            </c:otherwise>
+        </c:choose>
+    </ul>
+
 </section>

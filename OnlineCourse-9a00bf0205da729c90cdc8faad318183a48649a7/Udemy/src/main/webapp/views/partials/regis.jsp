@@ -6,7 +6,7 @@
         <div class="row d-flex">
             <div class="col-lg-6">
                 <div class="card1 pb-5">
-                    <div class="row px-3 justify-content-center mt-4 mb-5 border-line"> <img src="https://i.imgur.com/uNGdWHi.png" class="image"> </div>
+                    <div  class="row px-3 justify-content-center mt-4 mb-5 border-line"> <img style="margin-top: 180px" src="https://i.imgur.com/uNGdWHi.png" class="image"> </div>
                 </div>
             </div>
             <div class="col-lg-6">
@@ -27,30 +27,7 @@
                         <div class="line"></div> <small class="or text-center">Or</small>
                         <div class="line"></div>
                     </div>
-<%--                    <div class="row px-3">--%>
-<%--                        <label class="mb-1">--%>
-<%--                                <h6 class="mb-0 text-sm">Email Address</h6>--%>
-<%--                        </label>--%>
-<%--                        <input class="mb-4" type="text" name="email" placeholder="Enter a valid email address"> </div>--%>
-<%--                    <div class="row px-3"> <label class="mb-1">--%>
-<%--                        <div class="row px-3"> <label class="mb-1">--%>
-<%--                            <h6 class="mb-0 text-sm">Name</h6>--%>
-<%--                        </label> <input class="mb-4" type="text" name="email" placeholder="Enter a valid Name"> </div>--%>
-<%--                        <div class="row px-3"> <label class="mb-1">--%>
-<%--                            <h6 class="mb-0 text-sm">Date of Birth</h6>--%>
-<%--                        </label> <input class="mb-4" type="text" name="email" placeholder="Enter Date of Birth"> </div>--%>
-<%--                        <div class="row px-3"> <label class="mb-1">--%>
-<%--                            <div class="row px-3"> <label class="mb-1">--%>
-<%--                                <h6 class="mb-0 text-sm">Password</h6>--%>
-<%--                            </label> <input class="mb-4" type="text" name="email" placeholder="Enter Password"> </div>--%>
-<%--                            <div class="row px-3"> <label class="mb-1">--%>
-<%--                                <h6 class="mb-0 text-sm">Confirm-password</h6>--%>
-<%--                            </label> <input type="password" name="password" placeholder="Re-Type Password"> </div>--%>
-<%--                            <div class="row px-3 mb-4">--%>
-<%--                            </div>--%>
-<%--                            <div class="row mb-3 px-3"> <button type="submit" class="btn btn-blue text-center">Register</button> </div>--%>
-<%--                        </div>--%>
-<%--                    </div>--%>
+
 
                     <form method="post" id="frmRegister">
                         <div class="card">

@@ -67,12 +67,15 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Udemy/src/main/webapp/WEB-INF/tags2" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\AN\Desktop\OnlineCourse\OnlineCourse-9a00bf0205da729c90cdc8faad318183a48649a7\Udemy\src\main\webapp\WEB-INF\tags2" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\AN\Desktop\OnlineCourse\OnlineCourse-9a00bf0205da729c90cdc8faad318183a48649a7\Udemy\src\main\webapp\WEB-INF\tags" />
       <recent name="C:\Users\AN\Desktop\OnlineCourse\OnlineCourse-9a00bf0205da729c90cdc8faad318183a48649a7\Udemy\src\main\webapp\WEB-INF\tags2" />
@@ -166,7 +169,7 @@
       <workItem from="1611361955282" duration="2066000" />
       <workItem from="1611366493584" duration="469000" />
       <workItem from="1611367217351" duration="4604000" />
-      <workItem from="1611372392039" duration="8541000" />
+      <workItem from="1611372392039" duration="22130000" />
     </task>
     <servers />
   </component>

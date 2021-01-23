@@ -4,53 +4,65 @@
 
 <jsp:useBean id="categories" scope="request" type="java.util.List<beans.Category>"/>
 
-<t:main2>
+<t:main>
     <jsp:body>
-        <div class="card">
-            <div class="card-header">
-                <h4 class="d-flex justify-content-between">Categories
 
-                    <a class="btn btn-outline-success" href="${pageContext.request.contextPath}/Admin/Category/Add" role="button">
-                        <i class="fa fa-plus" aria-hidden="true"></i>
-                        Add Category
-                    </a>
+        <div class="container-fluid mt-3 w-auto">
+            <div class="row ">
+                <div class="col-sm-3">
+                    <jsp:include page="../../views/partials/left.jsp"/>
+                </div>
+                <div class="col-sm-9 ">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="d-flex justify-content-between">Categories
+
+                                <a class="btn btn-outline-success" href="${pageContext.request.contextPath}/Admin/Category/Add" role="button">
+                                    <i class="fa fa-plus" aria-hidden="true"></i>
+                                    Add Category
+                                </a>
 
 
-                </h4>
+                            </h4>
+                        </div>
+                        <c:choose>
+                            <c:when test="${categories.size() == 0}">
+                                <div class="card-body">
+                                    <p class="card-text">Không có dữ liệu.</p>
+                                </div>
+                            </c:when>
+                            <c:otherwise>
+                                <div class="card-body">
+                                    <table class="table table-hover">
+                                        <thead>
+                                        <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">Category</th>
+                                            <th scope="col">&nbsp;</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <c:forEach var="c" items="${categories}">
+                                            <tr>
+                                                <th scope="row">${c.catID}</th>
+                                                <td>${c.catName}</td>
+                                                <td class="text-right">
+                                                    <a class="btn btn-sm btn-outline-primary" href="${pageContext.request.contextPath}/Admin/Category/Edit?id=${c.catID}" role="button">
+                                                        <i class="fa fa-pencil" aria-hidden="true"></i>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        </c:forEach>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </c:otherwise>
+                        </c:choose>
+                    </div>
+                </div>
             </div>
-            <c:choose>
-                <c:when test="${categories.size() == 0}">
-                    <div class="card-body">
-                        <p class="card-text">Không có dữ liệu.</p>
-                    </div>
-                </c:when>
-                <c:otherwise>
-                    <div class="card-body">
-                        <table class="table table-hover">
-                            <thead>
-                            <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">Category</th>
-                                <th scope="col">&nbsp;</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <c:forEach var="c" items="${categories}">
-                                <tr>
-                                    <th scope="row">${c.catID}</th>
-                                    <td>${c.catName}</td>
-                                    <td class="text-right">
-                                        <a class="btn btn-sm btn-outline-primary" href="${pageContext.request.contextPath}/Admin/Category/Edit?id=${c.catID}" role="button">
-                                            <i class="fa fa-pencil" aria-hidden="true"></i>
-                                        </a>
-                                    </td>
-                                </tr>
-                            </c:forEach>
-                            </tbody>
-                        </table>
-                    </div>
-                </c:otherwise>
-            </c:choose>
         </div>
+
+
     </jsp:body>
-</t:main2>
+</t:main>

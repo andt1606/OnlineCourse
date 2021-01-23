@@ -1,12 +1,9 @@
-<<<<<<< HEAD:OnlineCourse-9a00bf0205da729c90cdc8faad318183a48649a7/Udemy/src/main/webapp/views/vwHome/ByCat.jsp
 <%@ page contentType="text/html; charset=utf-8" %>
 <%@ taglib prefix="t" tagdir="/WEB-INF/tags" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
-=======
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
-<%@taglib prefix="t" tagdir="/WEB-INF/tags" %>
+
 
 <html>
 <head>
@@ -34,7 +31,6 @@
 </head>
 <body>
 
->>>>>>> f17aae4ab79baeb37e63b60296fabfbf82536957:Udemy/target/WebWjbu-1.0-SNAPSHOT/views/vwHome/Index.jsp
 
 <jsp:useBean id="courses" scope="request" type="java.util.List<beans.Course>"/>
 
@@ -140,6 +136,7 @@
                                                 <div class="intro__bottom__content">
                                             <div class="intro__bottom__item">
                                                 <img src="${pageContext.request.contextPath}/public/imgs/sp/${c.courseID}/main_thumbs.jpg" />
+<%--                                                <img src="${pageContext.request.contextPath}/public/imgs/sp/1/main_thumbs.jpg" />--%>
                                                 <h2>The Complete Foundation Stock Trading Course</h2>
                                                 <p>Mohsen Hassan, bloom team</p>
                                                 <p>
@@ -476,7 +473,6 @@
                     </div>
                 </div>
             </div>
-
 
         </section>
 

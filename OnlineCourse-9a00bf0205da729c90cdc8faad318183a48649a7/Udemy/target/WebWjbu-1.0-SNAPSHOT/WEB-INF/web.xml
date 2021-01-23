@@ -23,6 +23,11 @@
         <url-pattern>*.com</url-pattern>
     </servlet-mapping>
 
+    <servlet-mapping>
+        <servlet-name>default</servlet-name>
+        <url-pattern>/public/*</url-pattern>
+    </servlet-mapping>
+
 
     <filter-mapping>
         <filter-name>SessionInitFilter</filter-name>

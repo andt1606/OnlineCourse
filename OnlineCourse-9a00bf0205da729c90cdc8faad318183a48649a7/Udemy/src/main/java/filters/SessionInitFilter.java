@@ -1,6 +1,6 @@
 package filters;
 
-//import beans.User;
+import beans.User;
 
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
@@ -18,7 +18,7 @@ public class SessionInitFilter implements Filter {
         HttpSession session = request.getSession();
         if (session.getAttribute("auth") == null) {
             session.setAttribute("auth", false);
-//            session.setAttribute("authUser", new User());
+            session.setAttribute("authUser", new User());
         }
 
         chain.doFilter(req, resp);

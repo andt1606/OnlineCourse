@@ -10,6 +10,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.text.ParseException;
@@ -17,7 +18,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Optional;
 
-@WebServlet(name = "AccountServlet",urlPatterns = "/Account/*")
+@WebServlet(name = "AccountServlet", urlPatterns = "/Account/*")
 public class AccountServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String path = request.getPathInfo();
@@ -36,7 +37,6 @@ public class AccountServlet extends HttpServlet {
                 break;
         }
     }
-
 
     private void postRegister(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String password = request.getParameter("password");
@@ -67,7 +67,13 @@ public class AccountServlet extends HttpServlet {
         if (user.isPresent()) {
             BCrypt.Result result = BCrypt.verifyer().verify(password.toCharArray(), user.get().getPassword());
             if (result.verified) {
-                ServletUtils.redirect("/Home", request, response);
+                HttpSession session = request.getSession();
+                session.setAttribute("auth", true);
+                session.setAttribute("authUser", user.get());
+
+                String url = (String) session.getAttribute("retUrl");
+                if (url == null) url = "/Home";
+                ServletUtils.redirect(url, request, response);
             } else {
                 request.setAttribute("hasError", true);
                 request.setAttribute("errorMessage", "Invalid password.");
@@ -81,9 +87,14 @@ public class AccountServlet extends HttpServlet {
     }
 
     private void postLogout(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        HttpSession session = request.getSession();
+        session.setAttribute("auth", false);
+        session.setAttribute("authUser", new User());
 
+        String url = request.getHeader("referer");
+        if (url == null) url = "/Home";
+        ServletUtils.redirect(url, request, response);
     }
-
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String path = request.getPathInfo();
