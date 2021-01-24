@@ -1,0 +1,240 @@
+html {
+    font-size: 62.5%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.4rem;
+    font-weight: normal;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.course {
+    position: relative;
+}
+.course__container__list {
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background-color: #fff;
+    position: absolute;
+    right: 10%;
+    top: 4rem;
+    width: 35rem;
+    height: 87rem;
+}
+.course__container__list img {
+    width: 35rem;
+    height: 19rem;
+    margin: 0 auto;
+    border-radius: 5px 5px 0 0;
+    border-bottom: 1px solid #ccc;
+}
+.course__container__list-content {
+    padding: 3.5rem 2.5rem 2.5rem 2.5rem;
+    background-color: white;
+}
+.course__container__list-content h2 {
+    font-weight: 700;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+.course__container__list-content h4 {
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+.course__container__list-content h3 {
+    font-weight: 600;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+}
+.course__button-add {
+    padding: 2rem 10rem;
+    font-weight: bold;
+    background-color: #EC5252;
+    color: white;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+.course__button-add:hover {
+    background-color: #e61b1b;
+}
+.course__button-buy {
+    padding: 2rem 10rem;
+    border: 1px solid #2896a9;
+    background-color: #fff;
+    border-radius: 4px;
+    margin-bottom: 1.2rem;
+    text-align: center;
+    color: #2896a9;
+    font-weight: bold;
+}
+.course__button-buy:hover {
+    color: #094c59;
+    border-color: #094c59;
+}
+.course__button-try {
+    margin-top: 1rem;
+    padding: 1.5rem 4.5rem;
+    border: 1px solid #2896a9;
+    text-align: center;
+    border-radius: 4px;
+    color: #2896a9;
+}
+.course__text {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 3.5rem;
+}
+.course__include {
+    margin-bottom: 3.5rem;
+}
+.course__include__item {
+    margin-bottom: 1rem;
+}
+.course__include__item i {
+    margin-right: 2rem;
+}
+.course__coupon {
+    text-align: center;
+    font-size: 1.4rem;
+    color: #2896a9;
+    font-weight: 600;
+    margin-bottom: 3.5rem;
+    cursor: pointer;
+}
+.course__coupon:hover {
+    color: #094c59;
+}
+.course__container-top {
+    height: 40rem;
+    background-color: #1c1c1e;
+    padding-bottom: 3.2rem;
+    padding-top: 3.2rem;
+    margin-bottom: 3rem;
+    display: relative;
+}
+.course__container-top-content {
+    margin: 0 auto;
+    width: 70rem;
+    color: #fff;
+    margin-left: 22rem;
+}
+.course__container-top-content-title {
+    font-size: 3.2rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+.course__container-top-content-tinydes {
+    font-size: 1.9rem;
+    line-height: 2.7rem;
+    margin-bottom: 2rem;
+}
+.course__container-top-content-rating {
+    margin-bottom: 2rem;
+}
+.course__container-top-content-rating b {
+    font-weight: 600;
+    color: #ffc48c;
+}
+.course__container-top-content-rating i {
+    color: #ffc48c;
+}
+.course__container-top-content-create {
+    margin-bottom: 2rem;
+}
+.course__update {
+    display: flex;
+    margin-bottom: 2rem;
+}
+.course__update__item {
+    margin-right: 2rem;
+}
+.course__button {
+    display: flex;
+}
+.course__button__item {
+    margin-right: 1rem;
+    padding: 1.5rem;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+.course__container-bottom {
+    height: 50rem;
+}
+.course__container-bottom-whatlearn {
+    width: 67rem;
+    background-color: #fbfbf8;
+    border: 1px solid #dcdacb;
+    margin-left: 22rem;
+}
+.course__container-bottom-whatlearn-content {
+    width: 70rem;
+    color: black;
+    padding: 3rem 3rem 1.5rem 3rem;
+}
+.course__container-bottom-whatlearn-content h2 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: #3c3b37;
+    margin-bottom: 2rem;
+}
+.course__container-bottom-whatlearn-content__item {
+    margin-bottom: 1.5rem;
+}
+.course__content {
+    margin-left: 22rem;
+    margin-top: 3.5rem;
+    font-size: 2.2rem;
+    font-weight: 600;
+}
+.course__no {
+    margin-left: 22rem;
+    margin-top: 3rem;
+    font-size: 0.8rem;
+}
+.course__description h2 {
+    margin-left: 22rem;
+    margin-top: 3.5rem;
+    font-size: 2.2rem;
+    font-weight: 600;
+}
+.course__description__mess {
+    width: 70rem;
+    margin-left: 22rem;
+    margin-top: 3.5rem;
+    line-height: 2.5rem;
+    font-weight: 500;
+}
+.course__who h2 {
+    margin-left: 22rem;
+    margin-top: 3.5rem;
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin-bottom: 3rem;
+}
+.course__for {
+    margin-left: 22rem;
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+}
+
+.inin {
+    margin-top: -20rem;
+    width: 70rem;
+    margin-left: 22rem;
+}
+
+/*# sourceMappingURL=style.css.map */

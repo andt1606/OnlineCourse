@@ -27,6 +27,7 @@
     <%--    <link rel="stylesheet" href="./style.css">--%>
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/views/vwHome/style.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/views/vwHome/slick.css">
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/views/vwCourse/style.css">
 
     <jsp:invoke fragment="css"/>
 
