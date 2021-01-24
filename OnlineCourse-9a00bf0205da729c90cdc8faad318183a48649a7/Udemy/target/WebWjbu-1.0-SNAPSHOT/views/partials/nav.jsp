@@ -2,6 +2,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
 <jsp:useBean id="authUser" scope="session" type="beans.User"/>
+<jsp:useBean id="categoriesWithDetails" scope="request" type="java.util.List<beans.Category>"/>
 
 <section class="nav">
     <!-- <div class="nav__logo"> -->
@@ -13,7 +14,7 @@
         <!-- <span class="nav-categories__text">Categories</span> -->
 
         <!-- <span>Categories</span> -->
-        <h5 class="nav__text">Categories</h5>
+        <h5 class="nav__text"><a href="${pageContext.request.contextPath}/Course/ByCat?id=1" style="text-decoration: none">Categories</a></h5>
 
 
         <ul class="nav-categories__list " style="font-size: 14px">
@@ -47,6 +48,13 @@
             <li class="nav-categories__item">
                 <span class="nav-categories__text">IT & Software</span>
             </li>
+
+
+            <c:forEach var="c" items="${categoriesWithDetails}">
+                <li class="nav-categories__item">
+                    <span  class="nav-categories__text">${c.catName}</span>
+                </li>
+            </c:forEach>
         </ul>
 
 

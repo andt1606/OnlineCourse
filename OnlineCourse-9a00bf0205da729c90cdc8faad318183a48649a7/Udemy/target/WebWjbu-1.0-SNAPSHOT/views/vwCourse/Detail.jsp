@@ -29,6 +29,9 @@
                                 <%--                <p class="card-text">Tồn kho: ${course.quantity}</p>--%>
                             <p class="card-text">${course.fullDes}</p>
                         </div>
+                        <div class="card-footer">
+                            <button type="button" class="btn btn-outline-danger">Buy This Course</button>
+                        </div>
                     </div>
                 </div>
             </div>

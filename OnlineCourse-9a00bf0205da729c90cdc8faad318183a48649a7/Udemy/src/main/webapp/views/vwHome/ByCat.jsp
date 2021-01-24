@@ -97,47 +97,29 @@
                     <div class="intro__top">
 
                         <ul class="nav nav-tabs"  >
-                            <li class="nav-item" >
-                                <a class="nav-link"  data-toggle="tab" href="#menu1"
-                                >Python</a>
-                            </li>
-                            <li class="nav-item" >
-                                <a class="nav-link"  data-toggle="tab" href="#menu1"
-                                >Excel</a>
-                            </li>
-                            <li class="nav-item" >
-                                <a class="nav-link"  data-toggle="tab" href="#menu1"
-                                >Web Development</a>
-                            </li>
-                            <li class="nav-item" >
-                                <a class="nav-link"  data-toggle="tab" href="#menu1"
-                                >Javascript</a>
-                            </li>
-                            <li class="nav-item" >
-                                <a class="nav-link"  data-toggle="tab" href="#menu1"
-                                >Data Science</a>
-                            </li>
-                            <li class="nav-item" >
-                                <a class="nav-link"  data-toggle="tab" href="#menu1"
-                                >AWS Certification</a>
-                            </li>
-                            <li class="nav-item" >
-                                <a class="nav-link"  data-toggle="tab" href="#menu1"
-                                >Drawing</a>
-                            </li>
+
+                                <c:forEach var="c" items="${categoriesWithDetails}">
+
+                                    <li class="nav-item" >
+                                        <a class="nav-link"   href="${pageContext.request.contextPath}/Home/ByCat?id=${c.catID}">
+                                                ${c.catName}</a>
+                                    </li>
+
+                                </c:forEach>
+
                         </ul>
 
 
                         <div class="tab-content" id="myTabContent">
                             <div class="tab-pane fade show active " id="menu1" >
                                 <div class="intro__bottom__container">
-                                    <div class="intro__bottom__carousel">
+                                    <div  class="intro__bottom__carousel">
                                         <c:forEach var="c" items="${courses}">
-                                                <div class="intro__bottom__content">
+                                                <a role="button" style="text-decoration: none" href="${pageContext.request.contextPath}/Course/Detail?id=${c.courseID}"><div  style="cursor: pointer" class="intro__bottom__content">
                                             <div class="intro__bottom__item">
                                                 <img src="${pageContext.request.contextPath}/public/imgs/sp/${c.courseID}/main_thumbs.jpg" />
 <%--                                                <img src="${pageContext.request.contextPath}/public/imgs/sp/1/main_thumbs.jpg" />--%>
-                                                <h2>The Complete Foundation Stock Trading Course</h2>
+                                                <h2>${c.courseName}</h2>
                                                 <p>Mohsen Hassan, bloom team</p>
                                                 <p>
                                                     <i class="fa fa-star"></i>
@@ -147,12 +129,13 @@
                                                     <i class="fa fa-star"></i>
                                                     <b>4.5</b> (17,931)
                                                 </p>
-                                                <p class="students__price"><span>$134.99</span> $15.99</p>
+                                                <p class="students__price"><span>$299.99</span>
+                                                    $<fmt:formatNumber value="${c.price}" type="number"/></p>
                                                 <div class="students__wrap__label">
                                                     <div class="students__label">BESTSELLER</div>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </div></a>
                                         </c:forEach>
                                     </div>
                                 </div>
@@ -202,196 +185,33 @@
             </div>
             <div class="students__container">
                 <div class="students__carousel">
-                    <div class="students__content">
-                        <div class="students__content__item">
-                            <img src="${pageContext.request.contextPath}/views/vwHome/imgs/course.jpg" />
-                            <h2>Microsoft Excel - Excel from Beginner to...</h2>
-                            <p>Kyle Pew, Office Newb LLC</p>
-                            <p>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <b>4.6</b> (143,668)
-                            </p>
-                            <p class="students__price"><span>$149.99</span> $20.99</p>
-                            <div class="students__wrap__label">
-                                <div class="students__label">BESTSELLER</div>
+
+                    <c:forEach var="c" items="${courses}">
+                        <a href="http://www.google.com" style="text-decoration: none"><div style="cursor: pointer" class="students__content">
+                            <div class="students__content__item">
+<%--                                <img src="${pageContext.request.contextPath}/views/vwHome/imgs/course.jpg" />--%>
+                                <img  src="${pageContext.request.contextPath}/public/imgs/sp/${c.courseID}/main_thumbs.jpg" />
+                                <h2>${c.courseName}</h2>
+                                <p>Kyle Pew, Office Newb LLC</p>
+                                <p>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <b>4.6</b> (143,668)
+                                </p>
+                                <p class="students__price"><span>$149.99</span>
+                                    $<fmt:formatNumber value="${c.price}" type="number"/></p>
+                                <div class="students__wrap__label">
+                                    <div class="students__label">BESTSELLER</div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="students__content">
-                        <div class="students__content__item">
-                            <img src="${pageContext.request.contextPath}/views/vwHome/imgs/course2.jpg" />
-                            <h2>User Experience Design Essentials - Adobe XD UI...</h2>
-                            <p>Daniel Walter Scott, Instructor HQ</p>
-                            <p>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <b>4.6</b> (20,112)
-                            </p>
-                            <p class="students__price"><span>$114.99</span> $13.99</p>
-                            <div class="students__wrap__label">
-                                <div class="students__label">BESTSELLER</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="students__content">
-                        <div class="students__content__item">
-                            <img src="${pageContext.request.contextPath}/views/vwHome/imgs/course3.jpg" />
-                            <h2>iOS 13 & Swift 5 - The Complete iOS App...</h2>
-                            <p>Dr. Angela Yu</p>
-                            <p>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <b>4.8</b> (44,315)
-                            </p>
-                            <p class="students__price"><span>$114.99</span> $13.99</p>
-                            <div class="students__wrap__label">
-                                <div class="students__label">BESTSELLER</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="students__content">
-                        <div class="students__content__item">
-                            <img src="${pageContext.request.contextPath}/views/vwHome/imgs/course4.jpg" />
-                            <h2>The Complete Web Developer in 2020: Zero...</h2>
-                            <p>Andrei Neagoie</p>
-                            <p>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <b>4.7</b> (37,279)
-                            </p>
-                            <p class="students__price"><span>$99.99</span> $11.99</p>
-                            <div class="students__wrap__label">
-                                <div class="students__label">BESTSELLER</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="students__content">
-                        <div class="students__content__item">
-                            <img src="${pageContext.request.contextPath}/views/vwHome/imgs/course5.jpg" />
-                            <h2>Advanced CSS and Sass: Flexbox, Grid, Animation...</h2>
-                            <p>Jonas Schmedtmann</p>
-                            <p>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <b>4.8</b> (22,749)
-                            </p>
-                            <p class="students__price"><span>$94.99</span> $10.99</p>
-                            <div class="students__wrap__label">
-                                <div class="students__label">BESTSELLER</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="students__content">
-                        <div class="students__content__item">
-                            <img src="${pageContext.request.contextPath}/views/vwHome/imgs/course6.jpg" />
-                            <h2>Java Tutorial for Complete Beginners</h2>
-                            <p>John Purcell</p>
-                            <p>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <b>4.3</b> (84,506)
-                            </p>
-                            <p class="students__price">Free</p>
-                            <div class="students__wrap__label">
-                                <div class="students__label">BESTSELLER</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="students__content">
-                        <div class="students__content__item">
-                            <img src="${pageContext.request.contextPath}/views/vwHome/imgs/course3.jpg" />
-                            <h2>2020 Complete Python Bootcamp: From Zero to...</h2>
-                            <p>Jose Portilla</p>
-                            <p>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <b>4.5</b> (294,994)
-                            </p>
-                            <p class="students__price"><span>$114.99</span> $13.99</p>
-                            <div class="students__wrap__label">
-                                <div class="students__label">BESTSELLER</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="students__content">
-                        <div class="students__content__item">
-                            <img src="${pageContext.request.contextPath}/views/vwHome/imgs/course3.jpg" />
-                            <h2>The Complete 2020 Web Development Bootcamp</h2>
-                            <p>Dr. Angela Yu</p>
-                            <p>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <b>4.7</b> (69,036)
-                            </p>
-                            <p class="students__price"><span>$114.99</span> $13.99</p>
-                            <div class="students__wrap__label">
-                                <div class="students__label">BESTSELLER</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="students__content">
-                        <div class="students__content__item">
-                            <img src="${pageContext.request.contextPath}/views/vwHome/imgs/course3.jpg" />
-                            <h2>The Web Developer Bootcamp</h2>
-                            <p>Colt Steele</p>
-                            <p>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <b>4.6</b> (174,402)
-                            </p>
-                            <p class="students__price"><span>$114.99</span> $13.99</p>
-                            <div class="students__wrap__label">
-                                <div class="students__label">BESTSELLER</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="students__content">
-                        <div class="students__content__item">
-                            <img src="${pageContext.request.contextPath}/views/vwHome/imgs/course3.jpg" />
-                            <h2>Automate the Boring Stuff with Python Programming</h2>
-                            <p>Al Sweigart</p>
-                            <p>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <b>4.6</b> (60,809)
-                            </p>
-                            <p class="students__price"><span>$49.99</span> $13.99</p>
-                            <div class="students__wrap__label">
-                                <div class="students__label">BESTSELLER</div>
-                            </div>
-                        </div>
-                    </div>
+                        </div></a>
+                    </c:forEach>
+<%--                    --%>
+
+
                 </div>
             </div>
         </section>

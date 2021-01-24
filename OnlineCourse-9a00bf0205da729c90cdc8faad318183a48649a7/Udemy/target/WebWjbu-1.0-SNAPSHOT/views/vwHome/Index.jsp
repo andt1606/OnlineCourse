@@ -3,7 +3,7 @@
 <%@ taglib prefix="t" tagdir="/WEB-INF/tags" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
-
+<jsp:useBean id="categoriesWithDetails" scope="request" type="java.util.List<beans.Category>"/>
 
 <t:main>
     <jsp:attribute name="css">
@@ -78,39 +78,55 @@
                     <div class="intro__top">
 
                         <ul class="nav nav-tabs"  >
-                            <li class="nav-item" >
-                                <a class="nav-link"  data-toggle="tab" href="#menu1"
-                                >Python</a>
-                            </li>
-                            <li class="nav-item" >
-                                <a class="nav-link"  data-toggle="tab" href="#menu1"
-                                >Excel</a>
-                            </li>
-                            <li class="nav-item" >
-                                <a class="nav-link"  data-toggle="tab" href="#menu1"
-                                >Web Development</a>
-                            </li>
-                            <li class="nav-item" >
-                                <a class="nav-link"  data-toggle="tab" href="#menu1"
-                                >Javascript</a>
-                            </li>
-                            <li class="nav-item" >
-                                <a class="nav-link"  data-toggle="tab" href="#menu1"
-                                >Data Science</a>
-                            </li>
-                            <li class="nav-item" >
-                                <a class="nav-link"  data-toggle="tab" href="#menu1"
-                                >AWS Certification</a>
-                            </li>
-                            <li class="nav-item" >
-                                <a class="nav-link"  data-toggle="tab" href="#menu1"
-                                >Drawing</a>
-                            </li>
+
+<%--                            <li class="nav-item" >--%>
+<%--                                <a class="nav-link"  data-toggle="tab" href="#menu1"--%>
+<%--                                >Python</a>--%>
+<%--                            </li>--%>
+<%--                            <li class="nav-item" >--%>
+<%--                                <a class="nav-link"  data-toggle="tab" href="#menu1"--%>
+<%--                                >Excel</a>--%>
+<%--                            </li>--%>
+<%--                            <li class="nav-item" >--%>
+<%--                                <a class="nav-link"  data-toggle="tab" href="#menu1"--%>
+<%--                                >Web Development</a>--%>
+<%--                            </li>--%>
+<%--                            <li class="nav-item" >--%>
+<%--                                <a class="nav-link"  data-toggle="tab" href="#menu1"--%>
+<%--                                >Javascript</a>--%>
+<%--                            </li>--%>
+<%--                            <li class="nav-item" >--%>
+<%--                                <a class="nav-link"  data-toggle="tab" href="#menu1"--%>
+<%--                                >Data Science</a>--%>
+<%--                            </li>--%>
+<%--                            <li class="nav-item" >--%>
+<%--                                <a class="nav-link"  data-toggle="tab" href="#menu1"--%>
+<%--                                >AWS Certification</a>--%>
+<%--                            </li>--%>
+<%--                            <li class="nav-item" >--%>
+<%--                                <a class="nav-link"  data-toggle="tab" href="#menu1"--%>
+<%--                                >Drawing</a>--%>
+<%--                            </li>--%>
+
+                            <c:forEach var="c" items="${categoriesWithDetails}">
+<%--                                <a href="${pageContext.request.contextPath}/Course/ByCat?id=${c.catID}" class="list-group-item list-group-item-action">--%>
+<%--                                    <i class="fa fa-caret-right" aria-hidden="true"></i>--%>
+<%--                                        ${c.catName}--%>
+<%--                                </a>--%>
+
+                                <li class="nav-item" >
+                                    <a class="nav-link"   href="${pageContext.request.contextPath}/Home/ByCat?id=${c.catID}">
+                                            ${c.catName}</a>
+                                </li>
+
+                            </c:forEach>
+
+
                         </ul>
 
 
                         <div class="tab-content" id="myTabContent">
-                            <div class="tab-pane fade show active " id="menu1" >
+                            <div class="tab-pane fade show active " id="#menu1" >
                                 <div class="intro__bottom__container">
                                     <div class="intro__bottom__carousel">
 

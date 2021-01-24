@@ -1,7 +1,9 @@
 package filters;
 
 import beans.Category;
+import beans.Course;
 import models.CategoryModel;
+import models.CourseModel;
 
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
@@ -19,6 +21,8 @@ public class LayoutFilter implements Filter {
         req.setAttribute("categoriesWithDetails", list);
 
         chain.doFilter(req, resp);
+
+
     }
 
     public void init(FilterConfig config) throws ServletException {
