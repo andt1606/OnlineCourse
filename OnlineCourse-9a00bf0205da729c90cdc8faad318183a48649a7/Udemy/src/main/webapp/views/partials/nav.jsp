@@ -6,7 +6,7 @@
 
 <section class="nav">
     <!-- <div class="nav__logo"> -->
-    <img src="${pageContext.request.contextPath}/views/vwHome/imgs/udemy-2-logo-png-transparent.jpg" alt="" class="nav__image">
+    <a href="${pageContext.request.contextPath}/Home/ByCat?id=1"><img  src="${pageContext.request.contextPath}/views/vwHome/imgs/udemy-2-logo-png-transparent.jpg" alt="" class="nav__image"></a>
     <!-- </div> -->
 
 

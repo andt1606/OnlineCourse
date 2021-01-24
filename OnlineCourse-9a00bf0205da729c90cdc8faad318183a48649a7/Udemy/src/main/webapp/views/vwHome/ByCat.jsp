@@ -187,7 +187,7 @@
                 <div class="students__carousel">
 
                     <c:forEach var="c" items="${courses}">
-                        <a href="http://www.google.com" style="text-decoration: none"><div style="cursor: pointer" class="students__content">
+                        <a href="${pageContext.request.contextPath}/Course/Detail?id=${c.courseID}" style="text-decoration: none"><div style="cursor: pointer" class="students__content">
                             <div class="students__content__item">
 <%--                                <img src="${pageContext.request.contextPath}/views/vwHome/imgs/course.jpg" />--%>
                                 <img  src="${pageContext.request.contextPath}/public/imgs/sp/${c.courseID}/main_thumbs.jpg" />

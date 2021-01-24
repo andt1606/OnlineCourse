@@ -32,6 +32,7 @@ img {
 .nav__image {
     width: 11rem;
     height: 3rem;
+    cursor: pointer;
 }
 .nav__text {
     display: inline-block;

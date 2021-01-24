@@ -19,7 +19,7 @@
                     <div class="card-body">
                         <table class="table table-hover">
                             <thead>
-                            <tr>
+                            <tr style="font-weight: bold">
                                 <th scope="col">#</th>
                                 <th scope="col">Course</th>
                                 <th scope="col">Description</th>
@@ -32,10 +32,12 @@
 
                             <tr>
                                 <th scope="row">1</th>
-                                <td>A</td>
-                                <td>B</td>
+                                <td style="line-height: normal">The Complete JavaScript Course 2021</td>
+                                <td style="line-height: normal">
+                                    The modern JavaScript course for everyone! Master JavaScript with projects, challenges and theory. Many courses in one!
+                                </td>
                                 <td class="text-right">
-                                    $999
+                                    $120.000
                                 </td>
 
 

@@ -15,9 +15,9 @@
                 <div class="col-sm-9 ">
                     <div class="card">
                         <div class="card-header">
-                            <h4 class="d-flex justify-content-between">Categories
+                            <h4 style="font-weight: 700" class="d-flex align-item-center justify-content-between p-3 ">Categories
 
-                                <a class="btn btn-outline-success" href="${pageContext.request.contextPath}/Admin/Category/Add" role="button">
+                                <a style="font-size: 10px" class="btn btn-outline-success p-3" href="${pageContext.request.contextPath}/Admin/Category/Add" role="button">
                                     <i class="fa fa-plus" aria-hidden="true"></i>
                                     Add Category
                                 </a>
@@ -34,10 +34,10 @@
                             <c:otherwise>
                                 <div class="card-body">
                                     <table class="table table-hover">
-                                        <thead>
-                                        <tr>
+                                        <thead style="font-weight: 700" >
+                                        <tr style="font-size: 20px">
                                             <th scope="col">#</th>
-                                            <th scope="col">Category</th>
+                                            <th class="" scope="col">Category</th>
                                             <th scope="col">&nbsp;</th>
                                         </tr>
                                         </thead>

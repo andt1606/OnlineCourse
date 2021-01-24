@@ -18,7 +18,7 @@
         <%--    </a>--%>
     </div>
 </div>
-<div class="card">
+<div class="card mb-4">
     <div class="card-header">
         <h4 style="font-weight: 700" class="p-3">Featured</h4>
     </div>

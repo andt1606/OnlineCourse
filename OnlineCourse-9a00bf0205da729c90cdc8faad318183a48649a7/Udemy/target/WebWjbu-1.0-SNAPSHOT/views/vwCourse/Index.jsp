@@ -16,8 +16,8 @@
                 </div>
                 <div class="col-sm-9 ">
                     <div class="card min-vw-100">
-                        <div class="card-header">
-                            <h4>Courses</h4>
+                        <div style="font-size: 17px" class="card-header p-4">
+                            <h4 style="font-weight: 700">Courses</h4>
                         </div>
                         <c:choose>
                             <c:when test="${courses.size() == 0}">
@@ -28,8 +28,8 @@
                             <c:otherwise>
                                 <div class="card-body">
                                     <table class="table table-hover ">
-                                        <thead>
-                                        <tr>
+                                        <thead style="font-size: 15px">
+                                        <tr style="font-weight: bold">
                                             <th scope="col">#</th>
                                             <th scope="col">Course</th>
                                             <th scope="col">TinyDes</th>
@@ -50,7 +50,7 @@
                                         </thead>
                                         <tbody>
                                         <c:forEach var="c" items="${courses}">
-                                            <tr>
+                                            <tr style="line-height: normal">
                                                 <th scope="row">${c.courseID}</th>
                                                 <td>${c.courseName}</td>
                                                 <td>${c.tinyDes}</td>
