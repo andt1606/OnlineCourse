@@ -24,19 +24,52 @@ public class CourseFEServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String path = request.getPathInfo();
-
+        if (path == null ) {
+            path = "/";
+        }
         switch (path) {
             case "/ByCat":
+
+
+
+//                int catID = Integer.parseInt(request.getParameter("id"));
+//                List<Course> list = CourseModel.findByCatID(catID);
+//                request.setAttribute("courses", list);
+//
+//                ServletUtils.forward("/views/vwCourse/ByCat.jsp", request, response);
+//                break;
+
                 int catID = Integer.parseInt(request.getParameter("id"));
-                List<Course> list = CourseModel.findByCatID(catID);
+                request.setAttribute("catID", catID);
+
+                final int LIMIT = 6;
+                int currentPage = 1;
+                if (request.getParameter("page") != null) {
+                    currentPage = Integer.parseInt(request.getParameter("page"));
+                }
+                int offset = (currentPage - 1) * LIMIT;
+                request.setAttribute("currentPage", currentPage);
+
+                int total = CourseModel.countByCatID(catID);
+                int nPages = total / LIMIT;
+                if (total % LIMIT > 0)
+                    nPages++;
+                int[] pages = new int[nPages];
+                for (int i = 0; i < nPages; i++) {
+                    pages[i] = i + 1;
+                }
+                request.setAttribute("pages", pages);
+
+                List<Course> list = CourseModel.findByCatID(catID, LIMIT, offset);
                 request.setAttribute("courses", list);
 
-//                 List<Category> categories = (List<Category>) request.getAttribute("categoriesWithDetails");
-//                 System.out.println(categories.size());
-
+                // List<Category> categories = (List<Category>) request.getAttribute("categoriesWithDetails");
+                // System.out.println(categories.size());
 
                 ServletUtils.forward("/views/vwCourse/ByCat.jsp", request, response);
                 break;
+
+
             case "/":
 
                 ServletUtils.forward("/views/vwCourse/ByCat.jsp", request, response);

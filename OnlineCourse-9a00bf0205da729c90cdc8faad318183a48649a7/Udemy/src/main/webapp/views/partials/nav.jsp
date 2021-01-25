@@ -4,7 +4,8 @@
 <jsp:useBean id="authUser" scope="session" type="beans.User"/>
 <jsp:useBean id="categoriesWithDetails" scope="request" type="java.util.List<beans.Category>"/>
 
-<section class="nav">
+<section style="" class="nav">
+
     <!-- <div class="nav__logo"> -->
     <a href="${pageContext.request.contextPath}/Home/ByCat?id=1"><img  src="${pageContext.request.contextPath}/views/vwHome/imgs/udemy-2-logo-png-transparent.jpg" alt="" class="nav__image"></a>
     <!-- </div> -->
