@@ -31,7 +31,7 @@
                                         <c:forEach var="c" items="${courses}">
                                             <div class="col-sm-4 mb-3">
                                                 <div class="card h-100">
-                                                    <img src="${pageContext.request.contextPath}/public/imgs/sp/${c.courseID}/main_thumbs.jpg" alt="${c.courseName}" title="${c.courseName}" class="card-img-top" />
+                                                    <img style="width: 100%; height: 200px" src="${pageContext.request.contextPath}/public/imgs/sp/${c.courseID}/main_thumbs.jpg" alt="${c.courseName}" title="${c.courseName}" class="card-img-top" />
                                                     <div class="card-body">
                                                         <h6 class="card-title">${c.courseName}</h6>
                                                         <h5 class="card-title text-danger">

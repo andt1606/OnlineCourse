@@ -16,8 +16,12 @@
                 </div>
                 <div class="col-sm-9 ">
                     <div class="card min-vw-100">
-                        <div style="font-size: 17px" class="card-header p-4">
+                        <div style="font-size: 17px" class="d-flex align-item-center  card-header p-4">
                             <h4 style="font-weight: 700">Courses</h4>
+                            <a style="font-size: 10px; margin-left: 900px" class="btn btn-outline-success p-3 " href="${pageContext.request.contextPath}/Admin/Course/Add" role="button">
+                                <i class="fa fa-plus " aria-hidden="true"></i>
+                                Add Course
+                            </a>
                         </div>
                         <c:choose>
                             <c:when test="${courses.size() == 0}">
@@ -69,7 +73,7 @@
                                                 </td>
 
                                                 <td class="text-right">
-                                                    <a class="btn btn-sm btn-outline-primary" href="#" role="button">
+                                                    <a style="font-size: 16px" class="btn btn-sm btn-outline-primary" href="${pageContext.request.contextPath}/Admin/Course/Edit?id=${c.courseID}" role="button">
                                                         <i class="fa fa-pencil" aria-hidden="true"></i>
                                                     </a>
                                                 </td>

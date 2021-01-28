@@ -1,6 +1,7 @@
 package models;
 
 import beans.Category;
+import beans.Course;
 import org.sql2o.Connection;
 import utils.DbUtils;
 

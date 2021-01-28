@@ -3,6 +3,7 @@ package controllers;
 import beans.Category;
 import beans.Course;
 import beans.Course;
+import models.CategoryModel;
 import models.CourseModel;
 import models.CourseModel;
 import utils.ServletUtils;
@@ -78,6 +79,7 @@ public class CourseFEServlet extends HttpServlet {
 
                 ServletUtils.forward("/views/vwCourse/ByCat.jsp", request, response);
                 break;
+
             case "/Detail":
                 int couID = Integer.parseInt(request.getParameter("id"));
                 Optional<Course> c = CourseModel.findByID(couID);

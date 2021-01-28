@@ -44,7 +44,10 @@
             <div class="course__container__list">
                 <img alt="${course.courseName}" title="${course.courseName}" src="${pageContext.request.contextPath}/public/imgs/sp/${course.courseID}/main_thumbs.jpg">
                 <div class="course__container__list-content">
-                    <h2> $${course.price}</h2>
+                    <h2> $<fmt:formatNumber value="${course.price}" type="number"/></h2>
+<%--                    <h5 class="card-title text-danger">--%>
+<%--                        $<fmt:formatNumber value="${c.price}" type="number"/>--%>
+<%--                    </h5>--%>
                     <div class="course__button-add">
                         Add to cart
                     </div>
