@@ -24,6 +24,38 @@
                 return;
             }
 
+            const password= $('#txtPassword').val();
+            if (password.length === 0) {
+                alert('Invalid password.');
+                return;
+            }
+
+
+            const confirm= $('#txtConfirm').val();
+            if (confirm.length === 0) {
+                alert('Invalid confirm.');
+                return;
+            }
+
+            const Email= $('#txtEmail').val();
+            const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+                function validateEmail(email) {
+                    return (re.test(email));
+                }
+                var Emailinput = document.querySelector('#txtEmail').value
+                console.log("email " + Emailinput + ' ' + validateEmail(Emailinput))
+                if (!Emailinput || !validateEmail(Emailinput)) {
+                    alert('Please fill out a valid email format!!');
+                    return false;
+                }
+
+
+            $('#frmRegister').off('submit').submit();
+
+
+
+
             $.getJSON('${pageContext.request.contextPath}/Account/IsAvailable?user=' + username, function (data) {
                 if (data === true) {
                     $('#frmRegister').off('submit').submit();
@@ -90,11 +122,11 @@
                                         </div>
                                         <div class="form-group">
                                             <label for="txtPassword" class="mb-4">Password</label>
-                                            <input style="font-size: 18px" type="password" class="form-control" id="txtPassword" name="password">
+                                            <input minlength="8" style="font-size: 18px" type="password" class="form-control" id="txtPassword" name="password">
                                         </div>
                                         <div class="form-group">
-                                            <label for="txtConfirm" class="mb-4">Confirm</label>
-                                            <input style="font-size: 18px" type="password" class="form-control" id="txtConfirm" name="confirm">
+                                            <label  for="txtConfirm" class="mb-4">Confirm</label>
+                                            <input minlength="8" style="font-size: 18px" type="password" class="form-control" id="txtConfirm" name="confirm">
                                         </div>
 
                                         <h5 style="font-size: 20px" class="mt-4 mb-6 font-weight-bold" >Personal Information</h5>
