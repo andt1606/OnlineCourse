@@ -36,6 +36,9 @@
                 alert('Invalid confirm.');
                 return;
             }
+            if(password!==confirm){
+                return alert("Password is not match!")
+            }
 
             const Email= $('#txtEmail').val();
             const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -49,18 +52,12 @@
                     alert('Please fill out a valid email format!!');
                     return false;
                 }
-
-
-            $('#frmRegister').off('submit').submit();
-
-
-
-
             $.getJSON('${pageContext.request.contextPath}/Account/IsAvailable?user=' + username, function (data) {
-                if (data === true) {
+                if (data === true ) {
                     $('#frmRegister').off('submit').submit();
                 } else {
                     alert('Not available.');
+                    return false;
                 }
             });
         });

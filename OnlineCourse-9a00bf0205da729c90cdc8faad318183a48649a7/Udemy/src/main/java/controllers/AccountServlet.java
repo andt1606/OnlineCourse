@@ -4,7 +4,6 @@ import at.favre.lib.crypto.bcrypt.BCrypt;
 import beans.User;
 import models.UserModel;
 import utils.ServletUtils;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -17,7 +16,6 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Optional;
-
 @WebServlet(name = "AccountServlet", urlPatterns = "/Account/*")
 public class AccountServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
