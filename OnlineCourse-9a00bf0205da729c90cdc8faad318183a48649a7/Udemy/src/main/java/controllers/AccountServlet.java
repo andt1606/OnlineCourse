@@ -54,6 +54,11 @@ public class AccountServlet extends HttpServlet {
         String name = request.getParameter("name");
         String email = request.getParameter("email");
         int permission = 0;
+
+
+
+
+
         User user = new User(-1, username, bcryptHashString, name, email, dob, permission);
         UserModel.add(user);
         ServletUtils.redirect("/Home", request, response);

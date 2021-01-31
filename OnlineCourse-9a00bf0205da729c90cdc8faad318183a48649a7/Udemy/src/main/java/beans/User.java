@@ -76,4 +76,18 @@ public class User {
     public void setPermission(int permission) {
         this.permission = permission;
     }
+
+
+    @Override
+    public String toString() {
+        return "User {" +
+                "id=" + id +
+                ", username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                ", name='" + name + '\'' +
+                ", email='" + email + '\'' +
+                ", dob=" + dob +
+                ", permission=" + permission +
+                '}';
+    }
 }

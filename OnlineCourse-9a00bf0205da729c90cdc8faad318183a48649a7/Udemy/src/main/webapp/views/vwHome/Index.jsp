@@ -67,7 +67,7 @@
 
 
 
-        <section class="intro">
+        <section  class="intro">
             <div class="intro__container">
                 <div class="intro__above">
                     <div class="intro__content">
@@ -259,7 +259,7 @@
             </div>
         </section>
 
-        <section class="mid">
+        <section class="mid" style="background-color:#fff;">
             <div class="mid__container">
                 <div class="mid__content">
                     <div class="mid__item">
@@ -292,7 +292,7 @@
         </section>
 
 
-        <section class="students">
+        <section style="background-color:#fff;" class="students">
             <div class="students__title">
                 <h2>Students are viewing</h2>
             </div>
@@ -493,7 +493,7 @@
         </section>
 
 
-        <section class="banner">
+        <section  class="banner">
             <div class="banner__container">
                 <div class="banner__content">
                     <h3>Get personal learning recommendations</h3>
@@ -505,7 +505,7 @@
             </div>
         </section>
 
-        <section class="container">
+        <section style="background-color:#fff;" class="container" >
 
             <div class="card-deck">
                 <div class="card">
@@ -573,7 +573,7 @@
 
         </section>
 
-        <section class="trusted">
+        <section style="background-color:#fff;"  class="trusted">
             <div class="trusted__title">
                 <p>Trusted by companies of all sizes</p>
             </div>

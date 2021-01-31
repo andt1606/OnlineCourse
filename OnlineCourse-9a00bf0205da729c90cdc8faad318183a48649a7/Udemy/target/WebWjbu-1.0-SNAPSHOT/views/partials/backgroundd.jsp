@@ -10,7 +10,7 @@
             <p>Study any topic, anytime. Choose from thousands of expert-led courses now.</p>
             <div class="backgroundd__search">
                 <input type="text" class="backgroundd__input" placeholder="What do you want to learn?">
-                <button><i class="fa fa-search"></i></button>
+                <button style="margin-top: 2px;"><i class="fa fa-search"></i></button>
             </div>
         </div>
     </div>
