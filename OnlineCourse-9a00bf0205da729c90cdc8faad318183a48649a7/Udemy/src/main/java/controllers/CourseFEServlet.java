@@ -20,7 +20,15 @@ import java.util.Optional;
 @WebServlet(name = "CourseFEServlet", urlPatterns = "/Course/*")
 public class CourseFEServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+        String path = request.getPathInfo();
+        /*switch (path) {
+            case "/Search":
+                ServletUtils.redirect("/Course/Search", request, response);
+                break;
+            default:
+                ServletUtils.redirect("/NotFound", request, response);
+                break;
+        }*/
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -31,14 +39,6 @@ public class CourseFEServlet extends HttpServlet {
         switch (path) {
             case "/ByCat":
 
-
-
-//                int catID = Integer.parseInt(request.getParameter("id"));
-//                List<Course> list = CourseModel.findByCatID(catID);
-//                request.setAttribute("courses", list);
-//
-//                ServletUtils.forward("/views/vwCourse/ByCat.jsp", request, response);
-//                break;
 
                 int catID = Integer.parseInt(request.getParameter("id"));
                 request.setAttribute("catID", catID);
@@ -89,6 +89,14 @@ public class CourseFEServlet extends HttpServlet {
                 } else {
                     ServletUtils.redirect("/Home", request, response);
                 }
+                break;
+
+            case "/Search":
+                String search = request.getParameter("search");
+                List<Course> listsearch = CourseModel.search(search);
+                request.setAttribute("courseSearch",listsearch);
+                ServletUtils.forward("/views/vwCourse/Search.jsp", request, response);
+
                 break;
             default:
                 ServletUtils.redirect("/NotFound", request, response);

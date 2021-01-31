@@ -20,6 +20,8 @@ public class LayoutFilter implements Filter {
         List<Category> list = CategoryModel.getAll();
         req.setAttribute("categoriesWithDetails", list);
 
+        String search = req.getParameter("search");
+        req.setAttribute("search",search);
         chain.doFilter(req, resp);
 
 

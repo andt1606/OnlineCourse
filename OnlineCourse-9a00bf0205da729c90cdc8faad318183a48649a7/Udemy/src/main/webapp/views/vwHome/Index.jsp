@@ -5,6 +5,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <jsp:useBean id="categoriesWithDetails" scope="request" type="java.util.List<beans.Category>"/>
 
+
 <t:main>
     <jsp:attribute name="css">
             <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/views/vwHome/style.css">
@@ -128,10 +129,11 @@
                         <div class="tab-content" id="myTabContent">
                             <div class="tab-pane fade show active " id="#menu1" >
                                 <div class="intro__bottom__container">
-                                    <div class="intro__bottom__carousel">
+                                    <div style="cursor: pointer" class="intro__bottom__carousel">
 
                                         <div class="intro__bottom__content">
-                                            <div class="intro__bottom__item">
+                                            <a   href="http://www.google.com"      style="text-decoration: none" ><div class="intro__bottom__item">
+
                                                 <img src="${pageContext.request.contextPath}/views/vwHome/imgs/course.jpg" />
                                                 <h2>The Complete Foundation Stock Trading Course</h2>
                                                 <p>Mohsen Hassan, bloom team</p>
@@ -147,7 +149,7 @@
                                                 <div class="students__wrap__label">
                                                     <div class="students__label">BESTSELLER</div>
                                                 </div>
-                                            </div>
+                                            </div></a>
                                         </div>
                                         <div class="intro__bottom__content">
                                             <div class="intro__bottom__item">
@@ -244,6 +246,10 @@
                                                 </div>
                                             </div>
                                         </div>
+
+
+
+
                                     </div>
                                 </div>
                             </div>

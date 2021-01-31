@@ -40,14 +40,14 @@
                                                         <p style="line-height: normal" class="card-text">${c.tinyDes}</p>
                                                     </div>
                                                     <div class="card-footer p-4">
-                                                        <a class="btn btn-sm btn-outline-primary" href="${pageContext.request.contextPath}/Course/Detail?id=${c.courseID}" role="button">
-                                                            <i style="font-size: 19px" class="fa fa-eye" aria-hidden="true"></i>
-                                                            <span style="font-size: 17px">Details</span>
+                                                        <a style="padding: 5px" class="btn btn-sm btn-outline-primary" href="${pageContext.request.contextPath}/Course/Detail?id=${c.courseID}" role="button">
+                                                            <i style="font-size: 13px" class="fa fa-eye" aria-hidden="true"></i>
+                                                            <span style="font-size: 15px">Details</span>
                                                         </a>
-                                                        <a class="btn btn-sm btn-outline-success" href="#" role="button">
-                                                            <i style="font-size: 19px" class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                                        <a style="padding: 5px" class="btn btn-sm btn-outline-success" href="#" role="button">
+                                                            <i style="font-size: 13px" class="fa fa-shopping-cart" aria-hidden="true"></i>
 
-                                                            <span style="font-size: 17px">Add to cart</span>
+                                                            <span style="font-size: 15px">Add to cart</span>
                                                         </a>
                                                     </div>
                                                 </div>
@@ -56,6 +56,7 @@
                                     </div>
 
                                 </div>
+
 
                                 <div class="card-footer">
                                     <nav aria-label="...">

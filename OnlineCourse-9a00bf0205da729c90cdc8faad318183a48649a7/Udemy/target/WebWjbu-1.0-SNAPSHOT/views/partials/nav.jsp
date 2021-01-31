@@ -64,13 +64,19 @@
 
     </div>
 
-    <form  class="nav-search">
+    <form  class="nav-search" action="${pageContext.request.contextPath}/Course/Search">
 
         <div class="nav-search__group">
-            <i  class="fa fa-search nav-search__icon" aria-hidden="true"></i>
+            <i style="font-size: 15px" class="fa fa-search nav-search__icon" aria-hidden="true"></i>
 
-            <input type="text" class="nav-search__input" id="name" placeholder="Search for anything" >
+            <input name="search"  type="search" class="nav-search__input" id="name" placeholder="Search for anything" >
             <!-- <label for="name" class="nav-search__label" >Search for anything</label> -->
+
+            <%--<button class="btn  my-2 my-sm-0" type="submit" style="border: none">
+                <i class="fa fa-search" aria-hidden="true"></i>
+                Submit
+            </button>--%>
+
         </div>
 
     </form>

@@ -95,7 +95,6 @@ public class CourseModel {
 
 
     public static void delete(int id) {
-//        final String sql = "delete from categories where CatID = :CatID";
 
         final String sql = "DELETE FROM courses WHERE CourseID = :courseid";
         try (Connection con = DbUtils.getConnection()) {
@@ -127,6 +126,24 @@ public class CourseModel {
                     .executeUpdate();
         }
     }
+
+
+    public static List<Course> search(String search) {
+        String sql = "select CourseID,CourseName,TinyDes,`Comment`, TeacherID,Price,DesContent,FullDes,Include,Wishlist,WhatLearn,Rating,courses.CatID,TitleContent\n" +
+                "from courses,categories\n" +
+                "where courses.CatID=categories.CatID and (( match(CourseName) against  (:search IN NATURAL LANGUAGE MODE) " +
+                "or CourseName LIKE :search) " +
+                "or ( match(CatName) against  (:search IN NATURAL LANGUAGE MODE) " +
+                "or CatName LIKE :search))\n" +
+                "group by courses.CourseID";
+        try (Connection con = DbUtils.getConnection()) {
+            return con.createQuery(sql)
+                    .addParameter("search", "%" +search + "%")
+
+                    .executeAndFetch(Course.class);
+        }
+    }
+
 
 
 
